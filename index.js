@@ -8,13 +8,6 @@ app.use(cors())
 
 app.use('/api', router)
 
-app.use('*', (req, res) => {
-    res.json({
-        status: 'not found path',
-        message: 'read the docs here: error_cant_find_repos'
-    })
-})
-
 app.get("/", (req, res) => {
     res.status(200).json({
         status: 200,
